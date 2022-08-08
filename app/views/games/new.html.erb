@@ -1,0 +1,15 @@
+
+
+<div class="list">
+<ul><% @letters.each do |letter|  %></ul>
+  <ul><%= letter  %></ul>
+  <% end %>
+</div>
+
+<form action="score" method="post" data-turbo="false">
+  <input type="text" name="word">
+  <button type="submit">submit </button>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters%>
+  <%= hidden_field_tag :time, Time.now%>
+</form>

@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.list {
+  display: flex;
+  text-align: center;
+  font-size: large;
+  font-size: 50px;
+}
